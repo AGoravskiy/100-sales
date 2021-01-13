@@ -1,0 +1,110 @@
+@mixin btn-xl($width, $height) {
+    width: $width;
+    height: $height;
+    background: linear-gradient(180deg, #FF0000 0%, #470000 96.87%);
+    box-shadow: 0px 22px 44px -12px rgba(255, 37, 0, 0.86);
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px #000000;
+    text-decoration: none;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin btn-l($width, $height) {
+    width: $width;
+    height: $height;
+    background:  linear-gradient(180deg, #FF0000 0%, #820000 100%);
+    box-shadow: 0px 4.40385px 4.40385px rgba(0, 0, 0, 0.44);
+    border-radius: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px #000000;
+    text-decoration: none;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin title-text($left, $font-size, $line-height) {
+    position: absolute;
+    top: 2.3rem;
+    left: $left;
+
+    font-weight: 900;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: uppercase;
+    color: #E7E7E7;
+    text-shadow: black 1px 0px, 
+                black 1px 1px, 
+                black 0px 1px, 
+                black -1px 1px,
+                black -1px 0px, 
+                black -1px -1px,
+                black 0px -1px, 
+                black 1px -1px;
+}
+
+@mixin title($left, $font-size, $line-height) {
+    background: url(../assets/images/Group_3_10.png) no-repeat;
+    width: 47.9rem;
+    height: 8.4rem;
+    margin-left: .1rem;
+    position: relative;
+
+    &__text {
+        @include title-text($left, $font-size, $line-height);
+    }
+}
+
+@mixin card-name {
+    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+@mixin card-subname {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+}
+
+@mixin cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 22.9rem;
+    height: 19.4rem;
+
+    background: #CED6D6;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.77);
+
+    .cell__text {
+        font-size: 1.9rem;
+        line-height: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,518 @@
+@import 'fonts/fonts';
+@import 'mixins/mixins';
+
+:root {
+    font-size: 10px;
+}
+
+* {
+    font-family: 'Gotham Pro';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 48rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    background: url(../assets/images/Group_40_1.png) no-repeat;
+    height: 99.2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 4rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-shadow: 0px 4px 4px #000000;
+        flex: 1 0 auto;
+        margin-top: .5rem;
+    }
+
+    &-discount {
+        position: absolute;
+        text-align: left;
+        top: 13rem;
+        left: 34rem;
+
+        &__size,
+        &__text {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #FF0000;
+            text-shadow: 0px 1.78194px 1.78194px #000000;
+        }
+
+        &__size {
+            font-size: 4.84rem;
+            line-height: 4.6rem;
+        }
+
+        &__text {
+            font-size: 2.69rem;
+    line-height: 2.6rem;
+        }
+    }
+
+    &__offer {
+        position: absolute;
+        width: 15rem;
+        
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-shadow: 0px 3.7px 3.7px rgba(0, 0, 0, 0.25);
+        top: 67.7rem;
+        left: 7rem;
+    }
+
+    &-price {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 73.2rem;
+
+        &-common {
+            width: 19.45rem;
+            height: 7.7rem;
+            background-color: #BFBEBE;
+            font-weight: 300;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            text-align: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+
+            & span {
+                font-size: 3.4rem;
+                font-weight: 300;
+                line-height: 4rem;
+            }
+        }
+
+        &-discount {
+            width: 9.1rem;
+            height: 9.4rem;
+            background-color: #DF1C01;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.58);
+            border-radius: .5rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__text,
+            &__size {
+                font-weight: bold;
+                color: #ffffff;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.77);
+            }
+
+            &__text {
+                font-size: 2.2rem;
+            }
+
+            &__size {
+                font-size: 4rem;
+            }
+        }
+
+        &-new {
+            width: 19.45rem;
+            height: 7.7rem;
+            background-color: #FAFF00;
+            font-size: 2.7rem;
+            text-align: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+
+            &__rub {
+                font-family: 'Circe';
+                font-size: 4.8rem;
+                font-weight: 800;
+                line-height: 5.7rem;
+            }
+
+            &__text {
+                font-family: 'Circe';
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
+
+            &-coins {
+                position: absolute;
+                top: 4.5rem;
+                font-family: 'Circe';
+                font-size: 2.2rem;
+                line-height: 2.6rem;
+
+                &__text {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        @include btn-xl(45.7rem, 8.3rem);
+        flex: 0 0 auto;
+        margin-bottom: 5.2rem;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-content {
+        position: relative;
+        background: url(../assets/images/Group_42_1.png);
+        width: 100%;
+        height: 118rem;
+        margin-bottom: 1.4rem;
+
+        &__title {
+            @include title-text(3.5rem, 4rem, 3.8rem);
+        }
+
+        &__first,
+        &__second,
+        &__third {
+            font-size: 2rem;
+            line-height: 1.9rem;
+        }
+
+        &__first > span,
+        &__second > span,
+        &__third > span {
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 1.9rem;
+        }
+
+        &__first {
+            position: absolute;
+            top: 41.2rem;
+            left: 21rem;
+    
+            width: 22rem;
+            text-align: center;
+        }
+
+        &__second {
+            position: absolute;
+            top: 69.5rem;
+            left: 7rem
+        }
+
+        &__third {
+            position: absolute;
+            top: 112.2rem; 
+            left: 4rem;
+        }
+    }
+
+    &-btn {
+        @include btn-xl(45.7rem, 8.3rem);
+        margin-bottom: 5.4rem;
+    }
+}
+
+.sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-content {
+        position: relative;
+        background: url(../assets/images/Group_44_1.png);
+        width: 100%;
+        height: 150rem;
+        margin-bottom: 1.4rem;
+
+        &__title {
+            @include title-text(3.5rem, 4rem, 3.8rem);
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 13.4rem;
+            left: 5.6rem;
+
+            &-row {
+                display: flex;
+                margin-bottom: 1.6rem;
+
+                &__parameter {
+                    width: 10.6rem;
+                    margin-right: 1rem;
+
+                    font-size: 2rem;
+                    line-height: 1.9rem;
+                }
+
+                &__value {
+                    font-size: 2rem;
+                    line-height: 1.9rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        @include btn-xl(45.7rem, 8.3rem);
+        margin-bottom: 6rem;
+    }
+}
+
+.stock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    &-title {
+        @include title(2rem, 3.8rem, 3.6rem);
+    }
+
+    &-card,
+    &-card2 {
+        width: 47.3rem;
+        height: 73.9rem;
+        position: relative;
+        margin-bottom: 2rem;
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 2rem;
+
+            &__name {
+                @include card-name();
+                align-self: flex-end;
+            }
+            &__subname {
+                @include card-subname();
+                align-self: flex-start;
+            }
+        }
+
+        &-sizes {
+            position: absolute;
+            top: 56.3rem;
+            left: 2rem;
+
+            &__text {
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+        }
+
+        &-price {
+            position: absolute;
+            top: 60.3rem;
+            left: 2.5rem;
+
+            display: flex;
+            justify-content: space-between;
+            width: 94%;
+
+            &-common {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-wrapper {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .text {
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
+                    }
+
+                    .value {
+                        font-weight: 300;
+                        font-size: 1.6rem;
+                        line-height: 1.5rem;
+                    }
+                }
+
+                &__line {
+                    margin: .5rem 0;
+                    width: 17.9rem;
+                    height: 0;
+                    border: 1.01474px solid #000000;
+                    transform: rotate(180deg);
+                }
+
+                &-btn {
+                    @include btn-l(22.9rem, 5.835rem);
+                    margin-top: 2rem;
+                }
+            }
+
+            &-new-wrapper {
+                width: 17.8rem;
+                
+                .stock-card-price-new {
+                    font-size: 2.5rem;
+
+                    &__rub {
+                        font-family: 'Circe';
+                        font-size: 6.8rem;
+                        font-weight: 800;
+                        line-height: 8.1rem;
+                    }
+        
+                    &__text {
+                        font-family: 'Circe';
+                        font-size: 2.3rem;
+                        line-height: 2.8rem;
+                    }
+        
+                    &-coins {
+                        position: absolute;
+                        top: 3.8rem;
+                        font-family: 'Circe';
+                        font-size: 3.2rem;
+                        line-height: 3.7rem;
+        
+                        &__text {
+                            font-size: 2.4rem;
+                            line-height: 2.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-card {
+        background: url(../assets/images/stock_photo1.png) no-repeat;
+    }
+
+    &-card2 {
+        background: url(../assets/images/stock_photo2.png) no-repeat;
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+        @include title(2.2rem, 3.4rem, 3.3rem);
+    }
+
+    &-wrapper {
+        height: 56rem;
+        overflow-y: scroll;
+
+        .reviews-review {
+            width: 44rem;
+            margin-bottom: 3rem;
+
+            &-info {
+                padding: 2rem 0 2rem 2rem;
+
+                &-customer {
+                    display: flex;
+                    margin-bottom: 1em;
+
+                    .customer-photo {
+                        margin-right: 2rem;
+                    }
+
+                    .customer-data {
+
+                        &__name {
+                            width: 23rem;
+                            font-size: 2.4rem;
+                            font-weight: bold;
+                            line-height: 2.9rem;
+                        }
+
+                        &__age {
+                            font-size: 1.9rem;
+                            font-weight: 300;
+                            line-height: 2.3rem;
+                        }
+                    }
+
+                    .customer-review_data {
+                        margin-top: 1rem;
+
+                        &__date {
+                            font-size: 1.7rem;
+                            font-weight: 300;
+                            line-height: 2.2rem;
+                        }
+                    }
+                }
+
+                &__text {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    line-height: 2.1rem;
+                }
+            }
+
+            &-order_photo {
+                display: flex;
+                width: 44rem;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        @include btn-xl(45.7rem, 8.3rem);
+        margin: 2rem 0 3.3rem 0;
+    }
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+        @include title(3.8rem, 3.4rem, 3.3rem);
+    }
+
+    &-info {
+        margin: 2.7rem 0 27.9rem 0;
+
+        &-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 1.6rem;
+
+            &-cell {
+                @include cell();
+            }
+        }
+    }
+}
